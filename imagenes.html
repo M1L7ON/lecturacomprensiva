@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Galería de Imágenes</title>
+
+    <link rel="stylesheet" href="imagenes.css">
+</head>
+
+<body>
+
+    <main class="galeria">
+
+        <!-- ENCABEZADO -->
+        <header class="encabezado">
+
+            <div class="icono-camara">📸</div>
+
+            <div class="titulo">
+                <h1>Imágenes</h1>
+
+                <p>
+                    Explora una colección de imágenes que te inspirarán,
+                    te harán soñar y harán más especial tu experiencia.
+                </p>
+            </div>
+
+            <div class="decoracion">
+                📚 💜
+                <p>Las imágenes también cuentan historias.</p>
+            </div>
+
+        </header>
+
+
+        <!-- CONTENEDORES DE IMÁGENES -->
+        <section class="contenedor-imagenes" id="galeriaImagenes">
+
+            <article class="tarjeta" data-categoria="aesthetic">
+                <img
+                    src="imagen1.jpeg"
+                    alt="Escritorio de estudio"
+                    onclick="verImagen(this)"
+                >
+                <div class="descripcion">
+                    <span>🖼️</span>
+                    <h3>La vaca</h3>
+                </div>
+            </article>
+
+
+            <article class="tarjeta" data-categoria="paisajes">
+                <img
+                    src="imagen2.jpeg"
+                    alt="Paisaje de montañas y lago"
+                    onclick="verImagen(this)"
+                >
+                <div class="descripcion">
+                    <span>🌄</span>
+                    <h3>Una mejor manera de vivir</h3>
+                </div>
+            </article>
+
+
+            <article class="tarjeta" data-categoria="animales">
+                <img
+                    src="imagen3.jpeg"
+                    alt="Gato"
+                    onclick="verImagen(this)"
+                >
+                <div class="descripcion">
+                    <span>🐾</span>
+                    <h3>¿Quién se ha llevado mi queso?</h3>
+                </div>
+            </article>
+
+
+            <article class="tarjeta" data-categoria="naturaleza">
+                <img
+                    src="imagen4.jpeg"
+                    alt="Flores de colores"
+                    onclick="verImagen(this)"
+                >
+                <div class="descripcion">
+                    <span>🌸</span>
+                    <h3>Cuentos Breves</h3>
+                </div>
+            </article>
+
+
+            <article class="tarjeta" data-categoria="motivacion">
+                <img
+                    src="imagen5.jpeg"
+                    alt="Amanecer inspirador"
+                    onclick="verImagen(this)"
+                >
+                <div class="descripcion">
+                    <span>⭐</span>
+                    <h3>Los hijos del alcohol</h3>
+                </div>
+            </article>
+
+
+            <article class="tarjeta" data-categoria="aesthetic">
+                <img
+                    src="imagen6.jpeg"
+                    alt="Libros para leer"
+                    onclick="verImagen(this)"
+                >
+                <div class="descripcion">
+                    <span>📚</span>
+                    <h3>Sangre de campeón</h3>
+                </div>
+            </article>
+
+
+            <article class="tarjeta" data-categoria="animales">
+                <img
+                    src="imagen7.jpeg"
+                    alt="Perros"
+                    onclick="verImagen(this)"
+                >
+                <div class="descripcion">
+                    <span>🐾</span>
+                    <h3>El secreto</h3>
+                </div>
+            </article>
+
+
+            <article class="tarjeta" data-categoria="naturaleza">
+                <img
+                    src="imagen8.jpeg"
+                    alt="Bosque natural"
+                    onclick="verImagen(this)"
+                >
+                <div class="descripcion">
+                    <span>🌿</span>
+                    <h3>Vulnerables</h3>
+                </div>
+            </article>
+
+
+            <article class="tarjeta" data-categoria="aesthetic">
+                <img
+                    src="imagen9.jpeg"
+                    alt="Paisaje con luz cálida"
+                    onclick="verImagen(this)"
+                >
+                <div class="descripcion">
+                    <span>💜</span>
+                    <h3>El vendedor más grande del mundo</h3>
+                </div>
+            </article>
+
+
+            <article class="tarjeta" data-categoria="paisajes">
+                <img
+                    src="imagen10.jpeg"
+                    alt="Hermoso paisaje"
+                    onclick="verImagen(this)"
+                >
+                <div class="descripcion">
+                    <span>🏞️</span>
+                    <h3>La tempestad</h3>
+                </div>
+            </article>
+
+
+            <article class="tarjeta" data-categoria="motivacion">
+                <img
+                    src="imagen11.jpeg"
+                    alt="Inspiración y creatividad"
+                    onclick="verImagen(this)"
+                >
+                <div class="descripcion">
+                    <span>✨</span>
+                    <h3>El principito</h3>
+                </div>
+            </article>
+
+
+            <article class="tarjeta" data-categoria="otros">
+                <img
+                    src="imagen12.jpeg"
+                    alt="Cielo estrellado"
+                    onclick="verImagen(this)"
+                >
+                <div class="descripcion">
+                    <span>🌙</span>
+                    <h3>Amargos años de un estudiante</h3>
+                </div>
+            </article>
+
+        </section>
+
+
+        <!-- VENTANA PARA VER LA IMAGEN EN GRANDE -->
+        <div class="visor" id="visor" onclick="cerrarImagen()">
+
+            <button class="cerrar" onclick="cerrarImagen()">
+                &times;
+            </button>
+
+            <img id="imagenGrande" src="" alt="Imagen ampliada">
+
+        </div>
+
+
+        <!-- PIE DE PÁGINA -->
+        <footer>
+            <p>💜 Las imágenes también cuentan historias 💜</p>
+        </footer>
+
+    </main>
+
+
+    <!-- JAVASCRIPT PARA FILTRAR Y AMPLIAR IMÁGENES -->
+    <script>
+        function filtrarImagenes(categoria, boton) {
+
+            const tarjetas = document.querySelectorAll(".tarjeta");
+            const botones = document.querySelectorAll(".categorias button");
+
+            botones.forEach(function(b) {
+                b.classList.remove("activo");
+            });
+
+            boton.classList.add("activo");
+
+            tarjetas.forEach(function(tarjeta) {
+
+                if (
+                    categoria === "todas" ||
+                    tarjeta.dataset.categoria === categoria
+                ) {
+                    tarjeta.style.display = "block";
+                } else {
+                    tarjeta.style.display = "none";
+                }
+
+            });
+        }
+
+
+        function verImagen(imagen) {
+
+            document.getElementById("imagenGrande").src = imagen.src;
+
+            document.getElementById("visor").classList.add("mostrar");
+
+        }
+
+
+        function cerrarImagen() {
+
+            document.getElementById("visor").classList.remove("mostrar");
+
+        }
+    </script>
+
+</body>
+</html>

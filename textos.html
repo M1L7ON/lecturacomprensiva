@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Textos Informativos</title>
+
+    <link rel="stylesheet" href="textos.css">
+</head>
+
+<body>
+
+    <main class="pagina">
+
+        <!-- ENCABEZADO -->
+        <header class="encabezado">
+
+            <div class="libros-icono">📚</div>
+
+            <div class="encabezado-texto">
+                <h1>Textos Informativos</h1>
+
+                <p>
+                    Descubre datos, hechos y conocimientos que te
+                    ayudarán a entender mejor el mundo.
+                </p>
+            </div>
+
+            <div class="frase">
+                <span>✈️</span>
+                <p>Leer también<br>es aprender.</p>
+                <span>♡</span>
+            </div>
+
+        </header>
+
+
+        <!-- CONTENEDORES -->
+        <section class="contenedor-textos">
+
+
+            <!-- TEXTO 1 -->
+            <article class="tarjeta">
+
+                <img
+                    src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=800&q=85"
+                    alt="Naturaleza y paisaje verde"
+                >
+
+                <div class="contenido">
+
+                    <div class="titulo-tarjeta">
+                        <span class="icono">🌿</span>
+                        <h2>El medio ambiente</h2>
+                    </div>
+
+                    <p>
+                        Conoce la importancia de cuidar nuestro planeta
+                        y las acciones que podemos realizar para un
+                        futuro más sostenible.
+                    </p>
+                    <a href="Medio-Ambiente.pdf" download>
+                <button>📖 Descargar ahora</button>
+                 </a>
+                 <br>
+
+                    <button onclick="mostrarTexto(1)">
+                        Leer más →
+                    </button>
+
+                    <div class="texto-completo" id="texto1">
+                        <p>
+                            El medio ambiente está formado por todos
+                            los elementos naturales que nos rodean,
+                            como el agua, el aire, el suelo, las plantas
+                            y los animales.
+                        </p>
+
+                        <p>
+                            Para protegerlo, debemos ahorrar agua,
+                            reciclar los residuos, evitar la
+                            contaminación y cuidar los espacios verdes.
+                        </p>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- TEXTO 2 -->
+            <article class="tarjeta">
+
+                <img
+                    src="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=800&q=85"
+                    alt="Planeta Tierra visto desde el espacio"
+                >
+
+                <div class="contenido">
+
+                    <div class="titulo-tarjeta">
+                        <span class="icono">🔭</span>
+                        <h2>El sistema solar</h2>
+                    </div>
+
+                    <p>
+                        Descubre los planetas, sus características
+                        y curiosidades sobre el universo que nos rodea.
+                    </p>
+                    <a href="Sistema Solar completo.pdf" download>
+                <button>📖 Descargar ahora</button>
+                 </a>
+                 <br>
+
+                    <button onclick="mostrarTexto(2)">
+                        Leer más →
+                    </button>
+
+                    <div class="texto-completo" id="texto2">
+                        <p>
+                            El sistema solar está formado por el Sol
+                            y los cuerpos celestes que giran a su
+                            alrededor, incluidos ocho planetas.
+                        </p>
+
+                        <p>
+                            La Tierra es el tercer planeta desde el Sol
+                            y el único conocido que alberga vida.
+                            Cada planeta tiene características propias.
+                        </p>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- TEXTO 3 -->
+            <article class="tarjeta">
+
+                <img
+                    src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=800&q=85"
+                    alt="Profesional de la salud"
+                >
+
+                <div class="contenido">
+
+                    <div class="titulo-tarjeta">
+                        <span class="icono">💙</span>
+                        <h2>Hábitos saludables</h2>
+                    </div>
+
+                    <p>
+                        Conoce cómo llevar una vida saludable a través
+                        de una buena alimentación, el ejercicio y el descanso.
+                    </p>
+                    <a href="Habitos_saludables.pdf" download>
+                <button>📖 Descargar ahora</button>
+                 </a>
+                 <br>
+
+                    <button onclick="mostrarTexto(3)">
+                        Leer más →
+                    </button>
+
+                    <div class="texto-completo" id="texto3">
+                        <p>
+                            Los hábitos saludables ayudan a cuidar
+                            nuestro cuerpo y nuestra mente.
+                        </p>
+
+                        <p>
+                            Mantener una alimentación variada, beber
+                            suficiente agua, realizar actividad física,
+                            dormir bien y mantener una buena higiene
+                            contribuye al bienestar.
+                        </p>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- TEXTO 4 -->
+            <article class="tarjeta">
+
+                <img
+                    src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=85"
+                    alt="Computadora y tecnología"
+                >
+
+                <div class="contenido">
+
+                    <div class="titulo-tarjeta">
+                        <span class="icono">💻</span>
+                        <h2>La tecnología</h2>
+                    </div>
+
+                    <p>
+                        Explora cómo la tecnología ha cambiado nuestra
+                        forma de vivir, comunicarnos y aprender.
+                    </p>
+                    <a href="el-impacto-de-la-Tecnologia.pdf" download>
+                <button>📖 Descargar ahora</button>
+                 </a>
+                 <br>
+
+                    <button onclick="mostrarTexto(4)">
+                        Leer más →
+                    </button>
+
+                    <div class="texto-completo" id="texto4">
+                        <p>
+                            La tecnología comprende herramientas,
+                            conocimientos y métodos que las personas
+                            utilizan para resolver problemas.
+                        </p>
+
+                        <p>
+                            Las computadoras, los teléfonos y los
+                            recursos digitales facilitan la comunicación,
+                            el estudio y el acceso a la información.
+                        </p>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- TEXTO 5 -->
+            <article class="tarjeta">
+
+                <img
+                    src="animales.jpeg"
+                    alt="Gato como ejemplo de los animales"
+                >
+
+                <div class="contenido">
+
+                    <div class="titulo-tarjeta">
+                        <span class="icono">🐾</span>
+                        <h2>Los animales</h2>
+                    </div>
+
+                    <p>
+                        Aprende sobre la diversidad de especies,
+                        sus hábitats y la importancia de protegerlos.
+                    </p>
+                    <a href="Los_Animeles.pdf" download>
+                <button>📖 Descargar ahora</button>
+                 </a>
+                 <br>
+
+                    <button onclick="mostrarTexto(5)">
+                        Leer más →
+                    </button>
+
+                    <div class="texto-completo" id="texto5">
+                        <p>
+                            Los animales son seres vivos que habitan
+                            distintos ambientes, como los bosques,
+                            los océanos, los desiertos y las montañas.
+                        </p>
+
+                        <p>
+                            Cada especie cumple una función importante
+                            en los ecosistemas. Proteger sus hábitats
+                            ayuda a conservar la biodiversidad.
+                        </p>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- TEXTO 6 -->
+            <article class="tarjeta">
+
+                <img
+                    src="https://images.unsplash.com/photo-1518998053901-5348d3961a04?auto=format&fit=crop&w=800&q=85"
+                    alt="Arquitectura histórica y patrimonio cultural"
+                >
+
+                <div class="contenido">
+
+                    <div class="titulo-tarjeta">
+                        <span class="icono">🏛️</span>
+                        <h2>Cultura y tradiciones</h2>
+                    </div>
+
+                    <p>
+                        Conoce las costumbres, fiestas y valores
+                        que forman parte de la identidad de los pueblos.
+                    </p>
+                    <a href="culturas_tradiciones.pdf" download>
+                <button>📖 Descargar ahora</button>
+                 </a>
+                 <br>
+
+                    <button onclick="mostrarTexto(6)">
+                        Leer más →
+                    </button>
+
+                    <div class="texto-completo" id="texto6">
+                        <p>
+                            La cultura comprende las costumbres,
+                            las creencias, el arte, la música,
+                            la gastronomía y las tradiciones de una comunidad.
+                        </p>
+
+                        <p>
+                            En Bolivia existen numerosas expresiones
+                            culturales que reflejan la diversidad
+                            de sus pueblos y su historia.
+                            Preservarlas ayuda a transmitirlas
+                            a las nuevas generaciones.
+                        </p>
+                    </div>
+
+                </div>
+
+            </article>
+
+        </section>
+
+
+        <!-- PIE DE PÁGINA -->
+        <footer class="pie">
+
+            <p>✦ La información también construye sueños ✦</p>
+
+        </footer>
+
+    </main>
+
+
+    <!-- FUNCIONALIDAD DE LOS BOTONES -->
+    <script>
+        function mostrarTexto(numero) {
+
+            const texto = document.getElementById("texto" + numero);
+            const boton = texto.previousElementSibling;
+
+            if (texto.classList.contains("mostrar")) {
+
+                texto.classList.remove("mostrar");
+                boton.innerHTML = "Leer más →";
+
+            } else {
+
+                texto.classList.add("mostrar");
+                boton.innerHTML = "Leer menos ↑";
+
+            }
+        }
+    </script>
+
+</body>
+</html>

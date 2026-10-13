@@ -1,0 +1,356 @@
+/* ===== ESTILOS GENERALES ===== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: #fff0f7;
+            color: #a30f55;
+        }
+
+        /* ===== FONDO PRINCIPAL ===== */
+
+        .adivina {
+            position: relative;
+            min-height: 100vh;
+            width: 100%;
+            padding: 40px 20px;
+            overflow: hidden;
+
+            background: linear-gradient(
+                135deg,
+                #fff0f7,
+                #ffe0ed,
+                #fff7fb
+            );
+        }
+
+        .contenido {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* ===== ENCABEZADO ===== */
+
+        .encabezado {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .titulo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+
+            color: #b80f60;
+            font-size: clamp(34px, 5vw, 64px);
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 15px;
+        }
+
+        .icono-titulo {
+            font-size: 45px;
+        }
+
+        .subtitulo {
+            color: #d14f91;
+            font-size: clamp(16px, 2.5vw, 24px);
+            line-height: 1.5;
+        }
+
+        /* ===== LISTA DE CUENTOS ===== */
+
+        .lista-cuentos {
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* ===== TARJETAS ===== */
+
+        .cuento-card {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+
+            width: 100%;
+            min-width: 0;
+            padding: 16px 24px;
+
+            background: rgba(255, 255, 255, 0.85);
+            border: 3px solid #f6a0c9;
+            border-radius: 32px;
+
+            box-shadow: 0 6px 18px rgba(190, 45, 115, 0.09);
+
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
+        }
+
+        .cuento-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 24px rgba(190, 45, 115, 0.17);
+        }
+
+        /* ===== IMÁGENES ===== */
+
+        .imagen-cuento {
+            display: block;
+            width: 250px;
+            height: 170px;
+            flex-shrink: 0;
+
+            object-fit: cover;
+            border-radius: 22px;
+            background: #ffd3e6;
+        }
+
+        /* ===== INFORMACIÓN ===== */
+
+        .informacion {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .informacion h2 {
+            color: #b80f60;
+            font-size: clamp(21px, 3vw, 35px);
+            line-height: 1.35;
+            margin-bottom: 12px;
+            overflow-wrap: anywhere;
+        }
+
+        .informacion p {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            color: #d85b99;
+            font-size: clamp(14px, 2vw, 22px);
+            line-height: 1.5;
+        }
+
+        /* ===== ICONO DE ACTIVIDAD ===== */
+
+        .icono-actividad {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 36px;
+            height: 36px;
+            flex-shrink: 0;
+
+            color: #e54d96;
+            font-size: 29px;
+        }
+
+        /* ===== FLECHA CIRCULAR ===== */
+
+        .flecha {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: 65px;
+            height: 65px;
+            flex-shrink: 0;
+
+            background: #f16ca9;
+            color: white;
+
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 38px;
+            font-weight: bold;
+
+            transition:
+                background 0.25s ease,
+                transform 0.25s ease;
+        }
+
+        .flecha:hover {
+            background: #c52c78;
+            transform: translateX(5px);
+        }
+
+        .flecha:focus-visible {
+            outline: 3px solid #c52c78;
+            outline-offset: 4px;
+        }
+
+        /* ===== DECORACIONES DEL FONDO ===== */
+
+        .decoracion {
+            position: absolute;
+            color: #f17eb4;
+            font-size: 34px;
+            opacity: 0.75;
+            pointer-events: none;
+        }
+
+        .corazon-1 {
+            top: 100px;
+            left: 4%;
+        }
+
+        .corazon-2 {
+            top: 100px;
+            right: 4%;
+        }
+
+        .estrella-1 {
+            top: 220px;
+            left: 7%;
+        }
+
+        .estrella-2 {
+            top: 55%;
+            right: 5%;
+        }
+
+        .corazon-3 {
+            bottom: 100px;
+            left: 3%;
+        }
+
+        .corazon-4 {
+            bottom: 100px;
+            right: 3%;
+        }
+
+        /* ===== DECORACIÓN INFERIOR ===== */
+
+        .decoracion-final {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+
+            margin-top: 35px;
+            color: #ed6da9;
+            font-size: 30px;
+        }
+
+        .linea {
+            width: 80px;
+            height: 3px;
+            border-radius: 5px;
+            background: #ed6da9;
+        }
+
+        /* ===== TABLETS ===== */
+
+        @media (max-width: 800px) {
+
+            .cuento-card {
+                gap: 18px;
+                padding: 15px;
+                border-radius: 25px;
+            }
+
+            .imagen-cuento {
+                width: 180px;
+                height: 140px;
+            }
+
+            .flecha {
+                width: 50px;
+                height: 50px;
+                font-size: 30px;
+            }
+        }
+
+        /* ===== CELULARES ===== */
+
+        @media (max-width: 520px) {
+
+            .adivina {
+                padding: 30px 12px;
+            }
+
+            .encabezado {
+                margin-bottom: 28px;
+            }
+
+            .titulo {
+                gap: 8px;
+                font-size: 34px;
+            }
+
+            .icono-titulo {
+                font-size: 30px;
+            }
+
+            .subtitulo {
+                font-size: 16px;
+            }
+
+            .lista-cuentos {
+                gap: 18px;
+            }
+
+            .cuento-card {
+                gap: 12px;
+                padding: 12px;
+                border-width: 2px;
+                border-radius: 20px;
+            }
+
+            .imagen-cuento {
+                width: 95px;
+                height: 105px;
+                border-radius: 13px;
+            }
+
+            .informacion h2 {
+                font-size: 16px;
+                line-height: 1.4;
+                margin-bottom: 6px;
+            }
+
+            .informacion p {
+                gap: 5px;
+                font-size: 12px;
+                line-height: 1.4;
+            }
+
+            .icono-actividad {
+                width: 23px;
+                height: 23px;
+                font-size: 20px;
+            }
+
+            .flecha {
+                width: 34px;
+                height: 34px;
+                font-size: 22px;
+            }
+
+            .decoracion {
+                font-size: 22px;
+            }
+
+            .decoracion-final {
+                margin-top: 25px;
+                gap: 15px;
+            }
+
+            .linea {
+                width: 50px;
+            }
+        }

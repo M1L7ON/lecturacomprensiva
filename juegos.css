@@ -1,0 +1,423 @@
+/* ================= GENERAL ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Comic Sans MS", "Trebuchet MS", sans-serif;
+    background: #e8f9fc;
+    color: #12366b;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    height: 105px;
+    background: #17428c;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 45px;
+    color: white;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-circulo {
+    width: 75px;
+    height: 75px;
+    background: lightblue;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+}
+
+.logo h1 {
+    font-size: 38px;
+    letter-spacing: 7px;
+    color: #ffd83d;
+}
+
+.logo h2 {
+    font-size: 25px;
+    color: white;
+}
+
+nav {
+    display: flex;
+    gap: 12px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    border-radius: 15px;
+    font-size: 17px;
+}
+
+nav a:hover,
+nav .activo {
+    background: lightblue;
+    color: #17428c;
+}
+/* MENU */
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: 1;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 19px;
+    padding: 15px 20px;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    background: rgba(255,255,255,0.15);
+}
+
+.menu .activo {
+    background: #a9a0ff;
+}
+
+
+/* BUSCADOR */
+
+.buscar {
+    background: white;
+    border-radius: 30px;
+    padding: 12px 18px;
+    color: #2350a0;
+    width: 260px;
+}
+
+.buscar input {
+    border: none;
+    outline: none;
+    width: 200px;
+    font-size: 15px;
+}
+
+
+/* USUARIO */
+
+.usuario {
+    font-size: 35px;
+}
+
+
+/* ================= HERO ================= */
+
+.titulo-libros {
+    margin: 20px 35px;
+    height: 260px;
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Imagen ocupando todo el section */
+.titulo-libros .imghe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    object-position: center;
+    z-index: 0;
+}
+
+/* Texto encima de la imagen */
+.titulo-libros div {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+}
+
+
+/* ================= JUEGOS ================= */
+
+.juegos {
+    padding: 25px 45px 45px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+
+/* TARJETAS */
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.tarjeta {
+    min-height: 285px;
+    border-radius: 22px;
+
+    padding: 25px 15px;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+
+
+/* ICONOS */
+
+.icono {
+    font-size: 65px;
+    margin-bottom: 12px;
+}
+
+
+/* TITULOS */
+
+.tarjeta h2 {
+    font-size: 29px;
+    color: #143d7c;
+    margin-bottom: 8px;
+}
+
+.tarjeta p {
+    font-size: 20px;
+    line-height: 1.4;
+    color: #172d4e;
+}
+
+
+/* BOTONES */
+
+.tarjeta button {
+    border: none;
+    border-radius: 30px;
+
+    padding: 12px 40px;
+
+    margin-top: 15px;
+
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.tarjeta button:hover {
+    transform: scale(1.08);
+}
+
+
+/* ================= COLORES ================= */
+
+.rosa {
+    background: #fac2cb;
+}
+
+.rosa button {
+    background: #ec5272;
+}
+
+
+.celeste {
+    background: #bfdbf0;
+}
+
+.celeste button {
+    background: #3e9de0;
+}
+
+
+.verde {
+    background: #cff1be;
+}
+
+.verde button {
+    background: #5cb957;
+}
+
+
+.morado {
+    background: #dccdfc;
+}
+
+.morado button {
+    background: #7248cc;
+}
+
+
+.turquesa {
+    background: #dccdfc;
+}
+
+.turquesa button {
+   background: #7248cc;
+}
+
+
+.amarillo {
+    background: #f8e4ac;
+}
+
+.amarillo button {
+    background: #f5a400;
+}
+
+
+.rosado {
+    background: #ffdce7;
+}
+
+.rosado button {
+    background: #e7476c;
+}
+
+
+/* ================= MOTIVACION ================= */
+
+.motivacion {
+    background: #ffbc90;
+    border-radius: 45px;
+    min-height: 285px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.motivacion h2 {
+    font-size: 30px;
+    color: #16418a;
+}
+
+.motivacion p {
+    font-size: 19px;
+    line-height: 1.4;
+}
+
+.libritos {
+    font-size: 60px;
+    margin-top: 5px;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #253f91;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    font-size: 22px;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1100px) {
+
+    .navbar {
+        padding: 0 20px;
+        gap: 15px;
+    }
+
+    .logo {
+        min-width: 180px;
+    }
+
+    .menu a {
+        font-size: 15px;
+        padding: 12px;
+    }
+
+    .buscar {
+        width: 180px;
+    }
+
+    .buscar input {
+        width: 120px;
+    }
+
+    .juegos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .navbar {
+        height: auto;
+        flex-wrap: wrap;
+        padding: 15px;
+    }
+
+    .menu {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .buscar {
+        display: none;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .titulo h1 {
+        font-size: 50px;
+    }
+
+    .juegos {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+}

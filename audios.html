@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Audiolibros ♡</title>
+    <link rel="stylesheet" href="audios.css">
+    
+</head>
+
+<body>
+
+    <!-- ===== ENCABEZADO ===== -->
+
+    <header class="hero">
+
+        <div class="hero-text">
+            <h1>🎧 Audiolibros</h1>
+
+            <p>
+                Grandes historias,<br>
+                en tu oído ♡
+            </p>
+
+            <div class="wave">♫ ♡ ♪ ♫ ♡ ♪</div>
+        </div>
+
+        <div class="hero-image">
+            <img
+                src="audio.jpeg"
+                alt="Libros y lectura">
+        </div>
+
+    </header>
+
+
+    <!-- ===== LISTA DE AUDIOCUENTOS ===== -->
+
+    <main class="container">
+
+        <h2 class="section-title">
+            ♡ Historias para escuchar
+        </h2>
+
+        <section class="book-list">
+
+
+            <!-- CUENTO 1 -->
+
+            <article class="book-card">
+
+                <img
+                    class="cover"
+                    src="vide2.jpeg"
+                    alt="Portada de El príncipe cautivo">
+
+                <div class="book-info">
+                    <h3>Romeo y Julieta</h3>
+                    <p class="duration">🎧 Audiocuento</p>
+                </div>
+
+                <button
+                    class="play-button"
+                    type="button"
+                    aria-label="Reproducir El príncipe cautivo"
+                    aria-pressed="false"
+                    onclick="toggleVideo('video1', this)">
+                    ▶
+                </button>
+
+                <video
+                    id="video1"
+                    class="hidden-video"
+                    preload="none">
+                    <source
+                        src="audi1.mp4"
+                        type="video/mp4">
+                </video>
+
+            </article>
+
+
+            <!-- CUENTO 2 -->
+
+            <article class="book-card">
+
+                <img
+                    class="cover"
+                    src="vide1.jpeg"
+                    alt="Portada de El alquimista">
+
+                <div class="book-info">
+                    <h3>La Odisea</h3>
+                    <p class="duration">🎧 Audiocuento</p>
+                </div>
+
+                <button
+                    class="play-button"
+                    type="button"
+                    aria-label="Reproducir El alquimista"
+                    aria-pressed="false"
+                    onclick="toggleVideo('video2', this)">
+                    ▶
+                </button>
+
+                <video
+                    id="video2"
+                    class="hidden-video"
+                    preload="none">
+                    <source
+                        src="audi2.mp4"
+                        type="video/mp4">
+                </video>
+
+            </article>
+
+
+            <!-- CUENTO 3 -->
+
+            <article class="book-card">
+
+                <img
+                    class="cover"
+                    src="aud3.jpeg"
+                    alt="Portada de Orgullo y prejuicio">
+
+                <div class="book-info">
+                    <h3>Amargos años de un estudiante</h3>
+                    <p class="duration">🎧 Audiocuento</p>
+                </div>
+
+                <button
+                    class="play-button"
+                    type="button"
+                    aria-label="Reproducir Orgullo y prejuicio"
+                    aria-pressed="false"
+                    onclick="toggleVideo('video3', this)">
+                    ▶
+                </button>
+
+                <video
+                    id="video3"
+                    class="hidden-video"
+                    preload="none">
+                    <source
+                        src="audi3.mp4"
+                        type="video/mp4">
+                </video>
+
+            </article>
+
+
+            <!-- CUENTO 4 -->
+
+            <article class="book-card">
+
+                <img
+                    class="cover"
+                    src="aud4.jpeg"
+                    alt="Portada de Toda la luz que no podemos ver">
+
+                <div class="book-info">
+                    <h3>La Vaca</h3>
+                    <p class="duration">🎧 Audiocuento</p>
+                </div>
+
+                <button
+                    class="play-button"
+                    type="button"
+                    aria-label="Reproducir Toda la luz que no podemos ver"
+                    aria-pressed="false"
+                    onclick="toggleVideo('video4', this)">
+                    ▶
+                </button>
+
+                <video
+                    id="video4"
+                    class="hidden-video"
+                    preload="none">
+                    <source
+                        src="audi4.mp4"
+                        type="video/mp4">
+                </video>
+
+            </article>
+
+
+            <!-- CUENTO 5 -->
+
+            <article class="book-card">
+
+                <img
+                    class="cover"
+                    src="aud5.jpeg"
+                    alt="Portada de El principito">
+
+                <div class="book-info">
+                    <h3>Sangre de Campeón</h3>
+                    <p class="duration">🎧 Audiocuento</p>
+                </div>
+
+                <button
+                    class="play-button"
+                    type="button"
+                    aria-label="Reproducir El principito"
+                    aria-pressed="false"
+                    onclick="toggleVideo('video5', this)">
+                    ▶
+                </button>
+
+                <video
+                    id="video5"
+                    class="hidden-video"
+                    preload="none">
+                    <source
+                        src="audi5.mp4"
+                        type="video/mp4">
+                </video>
+
+            </article>
+
+            <article class="book-card">
+
+                <img
+                    class="cover"
+                    src="aud6.jpeg"
+                    alt="Portada de El principito">
+
+                <div class="book-info">
+                    <h3>Tempestad en la Cordillera</h3>
+                    <p class="duration">🎧 Audiocuento</p>
+                </div>
+
+                <button
+                    class="play-button"
+                    type="button"
+                    aria-label="Reproducir El principito"
+                    aria-pressed="false"
+                    onclick="toggleVideo('video6', this)">
+                    ▶
+                </button>
+
+                <video
+                    id="video5"
+                    class="hidden-video"
+                    preload="none">
+                    <source
+                        src="audi6.mp4"
+                        type="video/mp4">
+                </video>
+
+            </article>
+
+
+            <article class="book-card">
+
+                <img
+                    class="cover"
+                    src="aud7.jpeg"
+                    alt="Portada de El principito">
+
+                <div class="book-info">
+                    <h3>La mejor manera de vivir</h3>
+                    <p class="duration">🎧 Audiocuento</p>
+                </div>
+
+                <button
+                    class="play-button"
+                    type="button"
+                    aria-label="Reproducir El principito"
+                    aria-pressed="false"
+                    onclick="toggleVideo('video7', this)">
+                    ▶
+                </button>
+
+                <video
+                    id="video5"
+                    class="hidden-video"
+                    preload="none">
+                    <source
+                        src="audio7.mp4"
+                        type="video/mp4">
+                </video>
+
+            </article>
+
+            <article class="book-card">
+
+                <img
+                    class="cover"
+                    src="aud8.jpeg"
+                    alt="Portada de El principito">
+
+                <div class="book-info">
+                    <h3>Edipo Rey</h3>
+                    <p class="duration">🎧 Audiocuento</p>
+                </div>
+
+                <button
+                    class="play-button"
+                    type="button"
+                    aria-label="Reproducir El principito"
+                    aria-pressed="false"
+                    onclick="toggleVideo('video8', this)">
+                    ▶
+                </button>
+
+                <video
+                    id="video5"
+                    class="hidden-video"
+                    preload="none">
+                    <source
+                        src="audi8.mp4"
+                        type="video/mp4">
+                </video>
+
+            </article>
+
+        </section>
+
+    </main>
+
+
+    <!-- ===== FOOTER ===== -->
+
+    <footer class="footer">
+
+        <div class="footer-decoration">
+            ♡ ─────── ♡ ─────── ♡
+        </div>
+
+        <p>La magia también se escucha</p>
+
+        <span>Hecho con amor ♡</span>
+
+    </footer>
+
+
+    <!-- ===== FUNCIONALIDAD DE LOS BOTONES ===== -->
+
+    <script>
+        async function toggleVideo(id, button) {
+            const video = document.getElementById(id);
+
+            // Pausa los demás cuentos antes de reproducir uno.
+            document.querySelectorAll(".hidden-video").forEach(item => {
+                if (item !== video) {
+                    item.pause();
+                    item.currentTime = 0;
+
+                    const otherButton = document.querySelector(
+                        '[onclick*="' + item.id + '"]'
+                    );
+
+                    if (otherButton) {
+                        otherButton.textContent = "▶";
+                        otherButton.setAttribute("aria-pressed", "false");
+                    }
+                }
+            });
+
+            if (video.paused) {
+                try {
+                    await video.play();
+                    button.textContent = "❚❚";
+                    button.setAttribute("aria-pressed", "true");
+                } catch (error) {
+                    alert(
+                        "No se pudo reproducir el cuento. " +
+                        "Comprueba que el archivo MP4 exista y sea válido."
+                    );
+                }
+            } else {
+                video.pause();
+                button.textContent = "▶";
+                button.setAttribute("aria-pressed", "false");
+            }
+
+            video.onended = () => {
+                button.textContent = "▶";
+                button.setAttribute("aria-pressed", "false");
+            };
+        }
+    </script>
+
+</body>
+</html>

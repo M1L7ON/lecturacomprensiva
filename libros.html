@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libros - Lectura Comprensiva</title>
+    <link rel="stylesheet" href="libros.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <div class="logo">
+            <div class="logo-circulo">📚</div>
+            <div>
+                <h1>LECTURA</h1>
+                <h2>COMPRENSIVA</h2>
+            </div>
+        </div>
+
+        <nav>
+            <a href="index.html">🏠 Inicio</a>
+            <a href="libros.html" class="activo">📖 Libros</a>
+            <a href="juegos.html">🎮 Juegos</a>
+            <a href="contenido.html">🎧 Contenido</a>
+        </nav>
+
+    </header>
+
+   <section class="titulo-libros">
+
+    <img src="letu.jpeg" class="imghe" alt="Lectura comprensiva">
+
+    <div>
+        <h2>✨ Libros ✨</h2>
+
+        <p>
+            Descubre historias increíbles,<br>
+            viaja con tu imaginación y aprende.
+        </p>
+    </div>
+
+</section>
+
+    <main class="contenido">
+
+
+        <section class="seccion-libros">
+
+            <div class="busqueda">
+                <input type="text" id="buscarLibro" placeholder="🔍  Buscar libros...">
+                 <div id="resultados"></div>
+            </div>
+            <script>
+const buscador = document.getElementById("buscarLibro");
+const resultados = document.getElementById("resultados");
+
+buscador.addEventListener("input", function() {
+
+    const texto = buscador.value.toLowerCase().trim();
+    const libros = document.querySelectorAll(".libro");
+
+    resultados.innerHTML = "";
+
+    libros.forEach(function(libro) {
+
+        const titulo = libro.querySelector("h3").textContent.toLowerCase();
+
+        if (texto === "" || titulo.includes(texto)) {
+
+            libro.style.display = "";
+
+        } else {
+
+            libro.style.display = "none";
+
+        }
+    });
+});
+</script>
+
+
+            <h2 class="subtitulo">📖 LOS LIBROS QUE ENCONTRARÁS</h2>
+
+
+            <!-- TARJETAS -->
+            <div class="libros">
+
+                <article class="libro">
+                    <img src="odisea.jpeg">
+                    <h3>La Odisea</h3>
+                    <p>Homero</p>
+                    <span>Literarios</span>
+                    <a href="La-celestina.pdf" download>
+                    <button>Descargar ahora</button>
+                    </a>
+                </article>
+
+
+                <article class="libro">
+                    <img src="flautista.jpeg">
+                    <h3>El Flautista de Hamelin</h3>
+                    <p>Hermanos Grimm</p>
+                    <span>Cuento Narrativo</span>
+                   <a href="El-flautista-de-Hamelin.pdf" download>
+                    <button>Descargar ahora</button>
+                    </a>
+                </article>
+
+
+                <article class="libro">
+                    <img src="edipo.jpeg">
+                    <h3>Edipo Rey</h3>
+                    <p>Sófocles</p>
+                    <span>Clásico</span>
+                    <a href="Edipo-rey.pdf" download>
+                    <button>Descargar ahora</button>
+                    </a>
+                </article>
+
+
+                <article class="libro">
+                    <img src="principito.jpeg">
+                    <h3>El Principito</h3>
+                    <p>Antoine de Sint-Exuperi</p>
+                    <span>Cuento Literario</span>
+                    <a href="El-principito.pdf" download>
+                    <button>Descargar ahora</button>
+                    </a>
+                </article>
+
+
+                <article class="libro">
+                    <img src="lobo.jpeg">
+                    <h3>El Lobo y la Zorra astuta</h3>
+                    <p>Caballero, Fernán</p>
+                    <span>Fábula</span>
+                    <a href="El-lobo-y-la-zorra.pdf" download>
+                    <button>Descargar ahora</button>
+                    </a>
+                </article>
+
+
+                <article class="libro">
+                    <img src="ilisopi.jpeg">
+                    <h3>Iliada</h3>
+                    <p>Homero</p>
+                    <span>Literatura</span>
+                    <a href="Iliada.pdf" download>
+                    <button>Descargar ahora</button>
+                    </a>
+                </article>
+
+
+                <article class="libro">
+                    <img src="mandarin.jpeg">
+                    <h3>El Mandarín</h3>
+                    <p>Eca de Queirós, José María</p>
+                    <span>Narrativo</span>
+                    <a href="El-Mandarin.pdf" download>
+                    <button>Descargar ahora</button>
+                    </a>
+                </article>
+
+
+                <article class="libro">
+                    <img src="navidad.jpeg">
+                    <h3>Cuentos de Navidad</h3>
+                    <p>Dickens, Charles</p>
+                    <span>Cuento</span>
+                    <a href="Cuento_Navidad.pdf" download>
+                    <button>Descargar ahora</button>
+                    </a>
+                </article>
+
+
+                <article class="libro">
+                    <img src="mil .jpeg">
+                    <h3>La Mil y una Noches</h3>
+                    <p>Anómimo</p>
+                    <span>Poético</span>
+                    <a href="mil-una-noches.pdf" download>
+                    <button>Descargar ahora</button>
+                    </a>
+                </article>
+
+                <article class="libro">
+                    <img src="alicia.jpeg">
+                    <h3>Alicia y el país de las Maravillas</h3>
+                    <p>Carroll, Lewis</p>
+                    <span>Cuento Clásico</span>
+                    <a href="Alicia_Maravillas.pdf" download>
+                    <button>Descargar ahora</button>
+                    </a>
+                </article>
+
+                <article class="libro">
+                    <img src="tempes.jpeg">
+                    <h3>La Tempestad</h3>
+                    <p>Shakespeare, William</p>
+                    <span>Obra de Teatro</span>
+                    <a href="La-tempestad.pdf" download>
+                    <button>Descargar ahora</button>
+                    </a>
+                </article>
+
+                <article class="libro">
+                    <img src="heroe.jpeg">
+                    <h3>El Héroe</h3>
+                    <p>Gracián, Baltasar</p>
+                    <span>Narrativo</span>
+                    <a href="El-heroe.pdf" download>
+                    <button>Descargar ahora</button>
+                    </a>
+                </article>
+
+                <article class="libro">
+                    <img src="fugi.jpeg">
+                    <h3>La Fugitiva</h3>
+                    <p>Proust, Marcel</p>
+                    <span>Literario</span>
+                    <a href="la-fugitiva.pdf" download>
+                    <button>Descargar ahora</button>
+                    </a>
+                </article>
+
+                <article class="libro">
+                    <img src="mujer.jpeg">
+                    <h3>La mujer en la sociedad moderna</h3>
+                    <p>Acosta, Soledad</p>
+                    <span>Literario</span>
+                    <a href="la-mujer-en-la-sociedad-moderna.pdf" download>
+                    <button>Descargar ahora</button>
+                    </a>
+                </article>
+
+                <article class="libro">
+                    <img src="sentido.jpeg">
+                    <h3>Del sentido y lo sensible</h3>
+                    <p>Aristóteles</p>
+                    <span>Filosófico</span>
+                    <a href="Del-sentido-y-lo-sensible.pdf" download>
+                    <button>Descargar ahora</button>
+                    </a>
+                </article>
+
+                <article class="libro">
+                    <img src="abis.jpeg">
+                    <h3>El Abismo</h3>
+                    <p>Andréiev, Leonid</p>
+                    <span>Cuento</span>
+                    <a href="El-abismo.pdf" download>
+                    <button>Descargar ahora</button>
+                    </a>
+                </article>
+
+                <article class="libro">
+                    <img src="paz.jpeg">
+                    <h3>La realización de la prosperidad y la paz</h3>
+                    <p>Allen, James</p>
+                    <span>Literario</span>
+                    <a href="La-realizacion-prosperidad.pdf" download>
+                    <button>Descargar ahora</button>
+                    </a>
+                </article>
+
+                <article class="libro">
+                    <img src="mise.jpeg">
+                    <h3>Los Miserables</h3>
+                    <p>Hugo, Victor</p>
+                    <span>Novela</span>
+                    <a href="Los-miserables.pdf" download>
+                    <button>Descargar ahora</button>
+                    </a>
+                </article>
+
+                <article class="libro">
+                    <img src="estu.jpeg">
+                    <h3>El estudiante de Salamanca</h3>
+                    <p>Espronceda, José</p>
+                    <span>Narrativo</span>
+                    <a href="El-estudiante-de-salamanca.pdf" download>
+                    <button>Descargar ahora</button>
+                    </a>
+                </article>
+
+                <article class="libro">
+                    <img src="atala.jpeg">
+                    <h3>Atala</h3>
+                    <p>Chateaubriand</p>
+                    <span>Literatura</span>
+                    <a href="Atala.pdf" download>
+                    <button>Descargar ahora</button>
+                    </a>
+                </article>
+
+                <article class="libro">
+                    <img src="donquijote.jpeg">
+                    <h3>Don Quijote</h3>
+                    <p>Miguel de Cervantes</p>
+                    <span>Literatura</span>
+                    <a href="ingenioso-hidalgo.pdf" download>
+                    <button>Descargar ahora</button>
+                    </a>
+                </article>
+
+                <article class="libro">
+                    <img src="romeo.jpeg">
+                    <h3>Romeo y Julieta</h3>
+                    <p>Shakespeare, William</p>
+                    <span>Teatral</span>
+                    <a href="Romeo-y-Julieta.pdf" download>
+                    <button>Descargar ahora</button>
+                    </a>
+                </article>
+
+                <article class="libro">
+                    <img src="peter.jpeg">
+                    <h3>Peter Pan</h3>
+                    <p>James Matthew</p>
+                    <span>Clásico</span>
+                    <a href="Peter_Pan.pdf" download>
+                    <button>Descargar ahora</button>
+                    </a>
+                </article>
+
+                <article class="libro">
+                    <img src="pelusa.jpeg">
+                    <h3>Pelusa</h3>
+                    <p>Carroll, Lewis</p>
+                    <span>Narrativo</span>
+                    <a href="Pelusa.pdf" download>
+                    <button>Descargar ahora</button>
+                    </a>
+                </article>
+
+                <article class="libro">
+                    <img src="celestina.jpeg">
+                    <h3>La Celestina</h3>
+                    <p>Fernando de Rojas</p>
+                    <span>Cuento Clásico</span>
+                    <a href="La-celestina.pdf" download>
+                    <button>Descargar ahora</button>
+                    </a>
+                </article>
+ 
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        📚 ✨ ¡Leer es soñar con los ojos abiertos! ✨ 💜
+    </footer>
+
+</body>
+</html>

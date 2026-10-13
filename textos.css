@@ -1,0 +1,320 @@
+/* CONFIGURACIÓN GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(
+        135deg,
+        #f4fbff,
+        #e1f4ff,
+        #f1faff
+    );
+
+    color: #0645a0;
+}
+
+.pagina {
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+
+/* ENCABEZADO */
+
+.encabezado {
+    width: 100%;
+    min-height: 210px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    gap: 25px;
+    padding: 25px 4%;
+
+    background: linear-gradient(
+        120deg,
+        #c4e7ff,
+        #eaf7ff,
+        #b8e1ff
+    );
+
+    border-bottom: 4px solid #d2edff;
+}
+
+.libros-icono {
+    font-size: 100px;
+    flex-shrink: 0;
+}
+
+.encabezado-texto {
+    flex: 1;
+}
+
+.encabezado-texto h1 {
+    font-size: clamp(40px, 4.5vw, 70px);
+    color: #0645a0;
+    margin-bottom: 12px;
+}
+
+.encabezado-texto p {
+    max-width: 650px;
+    font-size: 27px;
+    line-height: 1.6;
+    color: #1765b4;
+}
+
+.frase {
+    text-align: center;
+    color: #0752a9;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+.frase span {
+    font-size: 35px;
+}
+
+
+/* CONTENEDORES */
+
+.contenedor-textos {
+    width: 92%;
+    max-width: 1500px;
+    margin: 30px auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+
+/* TARJETAS */
+
+.tarjeta {
+    background: rgba(255, 255, 255, 0.9);
+
+    border: 2px solid #d0edff;
+    border-radius: 24px;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 15px rgba(30, 135, 210, 0.12);
+
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 10px 25px rgba(30, 135, 210, 0.2);
+}
+a{
+    text-decoration: none;
+}
+
+/* IMÁGENES */
+
+.tarjeta > img {
+    display: block;
+
+    width: calc(100% - 20px);
+    height: 150px;
+
+    margin: 10px;
+
+    object-fit: cover, fill;
+
+    border-radius: 16px;
+}
+
+
+/* CONTENIDO DE LAS TARJETAS */
+
+.contenido {
+    padding: 0 18px 18px;
+}
+
+.titulo-tarjeta {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+    margin: 5px 0 12px;
+}
+
+.titulo-tarjeta .icono {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 48px;
+    height: 48px;
+
+    background: #d9efff;
+    border-radius: 50%;
+
+    font-size: 24px;
+}
+
+.titulo-tarjeta h2 {
+    font-size: 22px;
+    color: #0645a0;
+}
+
+.contenido > p {
+    font-size: 18px;
+    line-height: 1.55;
+
+    color: #1765b4;
+
+    margin-bottom: 14px;
+}
+
+
+/* BOTÓN LEER MÁS */
+
+.contenido button {
+    display: block;
+
+    min-width: 150px;
+
+    margin: 0 auto;
+
+    padding: 12px 22px;
+
+    border: none;
+    border-radius: 30px;
+
+    background: linear-gradient(
+        90deg,
+        #55b7f5,
+        #2696e8
+    );
+
+    color: white;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.contenido button:hover {
+    background: #0867bf;
+    transform: scale(1.04);
+}
+
+
+/* TEXTO COMPLETO */
+
+.texto-completo {
+    display: none;
+
+    margin-top: 15px;
+    padding: 15px;
+
+    background: #e4f3fc;
+
+    border-left: 4px solid #42a8ed;
+    border-radius: 10px;
+}
+
+.texto-completo.mostrar {
+    display: block;
+}
+
+.texto-completo p {
+    font-size: 16px;
+    line-height: 1.7;
+
+    color: #15569b;
+
+    margin-bottom: 10px;
+}
+
+.texto-completo p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* PIE DE PÁGINA */
+
+.pie {
+    padding: 25px 15px 35px;
+
+    text-align: center;
+
+    color: #0752a9;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+
+    .contenedor-textos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .frase {
+        display: none;
+    }
+
+    .encabezado-texto h1 {
+        font-size: 40px;
+    }
+
+}
+
+
+/* CELULARES */
+
+@media (max-width: 600px) {
+
+    .encabezado {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .libros-icono {
+        font-size: 55px;
+    }
+
+    .encabezado-texto h1 {
+        font-size: 32px;
+    }
+
+    .encabezado-texto p {
+        font-size: 15px;
+    }
+
+    .contenedor-textos {
+        width: 90%;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .tarjeta > img {
+        height: 200px;
+    }
+
+    .titulo-tarjeta h2 {
+        font-size: 19px;
+    }
+
+}

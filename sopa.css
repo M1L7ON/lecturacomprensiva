@@ -1,0 +1,337 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Baloo 2', cursive;
+    background: #7e93ee;
+    color: #151b63;
+}
+
+
+/* =========================
+   BANNER
+========================= */
+
+.titulo-libros {
+    margin: 20px 35px;
+    height: 260px;
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Imagen ocupando todo el section */
+.titulo-libros .imghe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    object-position: center;
+    z-index: 0;
+}
+
+/* Texto encima de la imagen */
+.titulo-libros div {
+    position: relative;
+    z-index: 1;
+    text-align: right;
+    color:  black;
+    font-size: 25px;
+}
+
+
+/* =========================
+   CONTENEDOR
+========================= */
+
+.contenedor {
+    width: 95%;
+    max-width: 1500px;
+
+    margin: 25px auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+/* =========================
+   TARJETAS
+========================= */
+a{
+    text-decoration: none;
+    color: inherit;
+}
+.tarjeta {
+    min-height: 310px;
+
+    border-radius: 20px;
+
+    padding: 15px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+
+    transition: transform 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+}
+
+
+/* Colores */
+
+.principito {
+    background: #fff0c9;
+}
+
+.odisea {
+    background: #d9efff;
+}
+
+.iliada {
+    background: #eadcff;
+}
+
+.lobo {
+    background: #d9f4df;
+}
+
+.navidad {
+    background: #ffdcec;
+}
+
+.mandarin {
+    background: #ffe7bc;
+}
+
+
+/* =========================
+   IMÁGENES
+========================= */
+
+.imagen {
+    width: 48%;
+    height: 270px;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    flex-shrink: 0;
+}
+
+.imagen img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: fill;
+
+    transition: transform 0.3s;
+}
+
+.tarjeta:hover .imagen img {
+    transform: scale(1.04);
+}
+
+
+/* =========================
+   CONTENIDO
+========================= */
+
+.contenido {
+    width: 52%;
+}
+
+.contenido h2 {
+    font-size: 29px;
+    line-height: 1;
+
+    margin-bottom: 12px;
+
+    color: #12185f;
+}
+
+
+/* =========================
+   SOPA DE LETRAS
+========================= */
+
+.sopa {
+    background: rgba(255,255,255,0.75);
+
+    border-radius: 10px;
+
+    padding: 8px;
+
+    font-family: monospace;
+
+    font-size: 11px;
+
+    line-height: 1.6;
+
+    margin-bottom: 12px;
+}
+
+.sopa span {
+    display: block;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================
+   BOTÓN
+========================= */
+
+button {
+    border: none;
+
+    width: 100%;
+
+    padding: 10px;
+
+    border-radius: 30px;
+
+    background: #3478df;
+
+    color: white;
+
+    font-family: 'Baloo 2', cursive;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.04);
+    background: #245fc0;
+}
+
+
+/* Colores de botones */
+
+.principito button {
+    background: #f3a928;
+}
+
+.odisea button {
+    background: #327de0;
+}
+
+.iliada button {
+    background: #8151db;
+}
+
+.lobo button {
+    background: #29965d;
+}
+
+.navidad button {
+    background: #d74691;
+}
+
+.mandarin button {
+    background: #ed8b25;
+}
+
+
+/* =========================
+   PIE DE PÁGINA
+========================= */
+
+footer {
+    text-align: center;
+
+    padding: 25px;
+
+    font-size: 24px;
+
+    color: #17236d;
+
+    background: linear-gradient(
+        120deg,
+        #dcecff,
+        #f5e8ff
+    );
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 1000px) {
+
+    .contenedor {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .titulo h1 {
+        font-size: 50px;
+    }
+
+    .banner {
+        padding: 15px;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .banner {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .personaje,
+    .decoracion,
+    .titulo {
+        width: 100%;
+    }
+
+    .personaje {
+        height: 180px;
+    }
+
+    .decoracion {
+        height: 150px;
+    }
+
+    .titulo h1 {
+        font-size: 42px;
+    }
+
+    .titulo p {
+        font-size: 18px;
+    }
+
+    .contenedor {
+        grid-template-columns: 1fr;
+    }
+
+    .tarjeta {
+        min-height: 280px;
+    }
+}

@@ -1,0 +1,323 @@
+
+        /* ===== ESTILOS GENERALES ===== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: #e2d3f0;
+            color: #603582;
+        }
+
+        /* ===== PESTAÑA PRINCIPAL ===== */
+
+        .crucigramas {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            padding: 45px 20px;
+            overflow: hidden;
+            background: linear-gradient(
+                135deg,
+                #fbf5ff,
+                #f0e0ff,
+                #fff7ff
+            );
+        }
+
+        .contenido {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ===== ENCABEZADO ===== */
+
+        .encabezado {
+            text-align: center;
+            margin-bottom: 38px;
+        }
+
+        .titulo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 18px;
+            color: #65318d;
+            font-size: clamp(36px, 5vw, 65px);
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 15px;
+        }
+
+        .pieza {
+            font-size: 45px;
+        }
+
+        .subtitulo {
+            color: #9a72bd;
+            font-size: clamp(16px, 2.5vw, 25px);
+            line-height: 1.6;
+        }
+
+        /* ===== LISTA DE CRUCIGRAMAS ===== */
+
+        .lista-crucigramas {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* ===== CADA CONTENEDOR ===== */
+
+        .crucigrama-card {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+
+            width: 100%;
+            min-width: 0;
+            padding: 18px 24px;
+
+            background: rgba(255, 255, 255, 0.78);
+            border: 3px solid #d4b1f5;
+            border-radius: 32px;
+
+            box-shadow: 0 7px 18px rgba(119, 72, 157, 0.10);
+
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
+        }
+
+        .crucigrama-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 25px rgba(119, 72, 157, 0.18);
+        }
+
+        /* ===== IMÁGENES ===== */
+
+        .imagen-cuento {
+            width: 260px;
+            height: 180px;
+            flex-shrink: 0;
+            object-fit: cover, fill;
+            border-radius: 22px;
+            background: #e8d5fa;
+        }
+
+        /* ===== INFORMACIÓN ===== */
+
+        .informacion {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .informacion h2 {
+            font-size: clamp(21px, 3vw, 34px);
+            line-height: 1.4;
+            color: #633287;
+            margin-bottom: 12px;
+            overflow-wrap: anywhere;
+        }
+
+        .informacion p {
+            font-size: clamp(14px, 2vw, 23px);
+            line-height: 1.5;
+            color: #a17bc3;
+        }
+
+        .icono-calendario {
+            margin-right: 10px;
+        }
+
+        /* ===== FLECHA CIRCULAR ===== */
+
+        .flecha {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: 65px;
+            height: 65px;
+            flex-shrink: 0;
+
+            border-radius: 50%;
+            background: #b58add;
+            color: white;
+
+            font-size: 38px;
+            font-weight: bold;
+            text-decoration: none;
+
+            transition:
+                background 0.25s ease,
+                transform 0.25s ease;
+        }
+
+        .flecha:hover {
+            background: #8650b4;
+            transform: translateX(5px);
+        }
+
+        .flecha:focus-visible {
+            outline: 3px solid #8650b4;
+            outline-offset: 4px;
+        }
+
+        /* ===== DECORACIONES ===== */
+
+        .corazon {
+            position: absolute;
+            color: #bd91e4;
+            font-size: 35px;
+            opacity: 0.8;
+            pointer-events: none;
+        }
+
+        .corazon-1 {
+            top: 70px;
+            left: 6%;
+        }
+
+        .corazon-2 {
+            top: 70px;
+            right: 6%;
+        }
+
+        .corazon-3 {
+            bottom: 90px;
+            left: 5%;
+        }
+
+        .corazon-4 {
+            bottom: 90px;
+            right: 5%;
+        }
+
+        /* ===== DECORACIÓN INFERIOR ===== */
+
+        .decoracion-final {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 35px;
+            color: #b58add;
+            font-size: 30px;
+        }
+
+        .linea {
+            width: 80px;
+            height: 3px;
+            border-radius: 5px;
+            background: #b58add;
+        }
+
+        /* ===== DISEÑO PARA TABLETS ===== */
+
+        @media (max-width: 800px) {
+
+            .crucigrama-card {
+                gap: 18px;
+                padding: 15px;
+                border-radius: 24px;
+            }
+
+            .imagen-cuento {
+                width: 180px;
+                height: 140px;
+            }
+
+            .flecha {
+                width: 50px;
+                height: 50px;
+                font-size: 30px;
+            }
+        }
+
+        /* ===== DISEÑO PARA CELULARES ===== */
+
+        @media (max-width: 520px) {
+
+            .crucigramas {
+                padding: 30px 12px;
+            }
+
+            .encabezado {
+                margin-bottom: 28px;
+            }
+
+            .titulo {
+                gap: 8px;
+                font-size: 34px;
+            }
+
+            .pieza {
+                font-size: 30px;
+            }
+
+            .subtitulo {
+                font-size: 16px;
+            }
+
+            .lista-crucigramas {
+                gap: 18px;
+            }
+
+            .crucigrama-card {
+                gap: 12px;
+                padding: 12px;
+                border-width: 2px;
+                border-radius: 20px;
+            }
+
+            .imagen-cuento {
+                width: 95px;
+                height: 105px;
+                border-radius: 13px;
+            }
+
+            .informacion h2 {
+                font-size: 16px;
+                line-height: 1.4;
+                margin-bottom: 6px;
+            }
+
+            .informacion p {
+                font-size: 12px;
+                line-height: 1.4;
+            }
+
+            .icono-calendario {
+                margin-right: 3px;
+            }
+
+            .flecha {
+                width: 34px;
+                height: 34px;
+                font-size: 22px;
+            }
+
+            .corazon {
+                font-size: 22px;
+            }
+
+            .decoracion-final {
+                margin-top: 25px;
+                gap: 15px;
+            }
+
+            .linea {
+                width: 50px;
+            }
+        }

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lectura Comprensiva</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+
+            <div>
+                <h1>LECTURA</h1>
+                <h2>COMPRENSIVA</h2>
+            </div>
+
+        <nav>
+            <a href="index.html" class="activo">🏠 Inicio</a>
+            <a href="libros.html">📖 Libros</a>
+            <a href="juegos.html">🎮 Juegos</a>
+            <a href="contenido.html">🏠 Contenido</a>
+        </nav>
+
+       <div class="buscar">
+    <input
+        type="text"
+        id="buscar"
+        placeholder="🔍 Buscar libros, juegos..."
+        autocomplete="off"
+    >
+
+    <div id="resultados" class="tablero-resultados"></div>
+</div>
+
+    </header>
+
+    <section class="banner">
+        <div class="decoracion">
+            <img src="in.jpeg">
+        </div>
+
+    </section>
+
+    <section class="opciones">
+
+    <div class="opcion">
+        <a href="libros.html">
+            <img src="lib.jpeg" alt="Libros">
+        </a>
+    </div>
+
+    <div class="opcion">
+        <a href="juegos.html">
+            <img src="jue.jpeg" alt="Juegos">
+        </a>
+    </div>
+
+    <div class="opcion">
+        <a href="contenido.html">
+            <img src="cont.jpeg" alt="Contenido">
+        </a>
+    </div>
+
+</section>
+
+    <section class="recomendados">
+
+        <div class="titulo">
+            <h2>📚 RECOMENDADOS PARA TI</h2>
+        </div>
+
+
+        <div class="contenedor-libros">
+
+            <div class="libro">
+                <img src="odisea.jpeg" class="imgre">
+
+                <h3>La Odisea</h3>
+                <p>Homero</p>
+
+                <span>Literatura</span>
+                 <a href="La-celestina.pdf" download>
+                <button>📖 Descargar ahora</button>
+                 </a>
+            </div>
+
+            <div class="libro">
+                <img src="edipo.jpeg" class="imgre">
+
+                <h3>Edipo Rey</h3>
+                <p>Sófocles</p>
+
+                <span>Clásico</span>
+                 <a href="Edipo-rey.pdf" download>
+                <button>📖 Descargar ahora</button>
+                 </a>
+            </div>
+
+            <div class="libro">
+                <img src="lobo.jpeg" class="imgre">
+
+                <h3>El Lobo y la Zorra Astuta</h3>
+                <p>Caballero, Fernán</p>
+
+                <span>Fábula</span>
+
+                <a href="El-lobo-y-la-zorra.pdf" download>
+                <button>📖 Descargar ahora</button>
+                 </a>
+            </div>
+
+
+            <!-- LIBRO 4 -->
+            <div class="libro">
+                <img src="alicia.jpeg" class="imgre">
+
+                <h3>Alicia y el país de las maravillas</h3>
+                <p>Carroll, Lewis</p>
+
+                <span>Cuento Clásico</span>
+
+                <a href="Alicia_Maravillas.pdf" download>
+                <button>📖 Descargar ahora</button>
+                 </a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+        📚 ✨ ¡Leer es soñar con los ojos abiertos! ✨ 📚
+    </footer>
+<script>
+const paginas = [
+    { nombre: "📚 Libros", palabras: ["libro", "libros", "lectura"], url: "libros.html" },
+    { nombre: "🎮 Juegos", palabras: ["juego", "juegos"], url: "juegos.html" },
+    { nombre: "🔎 Sopa de letras", palabras: ["sopa", "sopa de letras"], url: "sopa.html" },
+    { nombre: "📝 Preguntas", palabras: ["preguntas", "pregunta"], url: "cuestionario.html" },
+    { nombre: "📝 Textos informátivos", palabras: ["informátivos", "textos", "infor"], url: "textos.html" },
+    { nombre: "🎧 Audiolibros", palabras: ["audio", "audiolibros"], url: "audios.html" },
+    { nombre: "📖 Imágenes", palabras: ["imágen", "imagenes"], url: "imagenes.html" },
+    { nombre: "📕 Edipo Rey", palabras: ["edipo", "sofocles"], url: "libros.html" },
+    { nombre: "🎧 Contenidos", palabras: ["contenido", "Contenido"], url: "contenido.html" },
+    { nombre: "📖 La Odisea", palabras: ["odisea", "homero"], url: "libros.html" },
+    { nombre: "🐺 El Lobo y la Zorra Astuta", palabras: ["lobo", "zorra"], url: "libros.html" },
+    { nombre: "🌷 Alicia y el país de las maravillas", palabras: ["alicia", "maravillas"], url: "libros.html" }
+];
+
+const campo = document.getElementById("buscar");
+const tablero = document.getElementById("resultados");
+
+function normalizar(texto) {
+    return texto.toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .trim();
+}
+
+campo.addEventListener("input", function () {
+    const texto = normalizar(campo.value);
+    tablero.innerHTML = "";
+
+    if (texto === "") {
+        tablero.style.display = "none";
+        return;
+    }
+
+    const encontrados = paginas.filter(pagina =>
+        normalizar(pagina.nombre).includes(texto) ||
+        pagina.palabras.some(palabra =>
+            normalizar(palabra).includes(texto)
+        )
+    );
+
+    tablero.style.display = "block";
+
+    if (encontrados.length === 0) {
+        tablero.innerHTML = "<p>No se encontraron resultados.</p>";
+        return;
+    }
+
+    encontrados.forEach(pagina => {
+        const enlace = document.createElement("a");
+        enlace.href = pagina.url;
+        enlace.textContent = pagina.nombre;
+        tablero.appendChild(enlace);
+    });
+});
+
+document.addEventListener("click", function (evento) {
+    if (!document.querySelector(".buscar").contains(evento.target)) {
+        tablero.style.display = "none";
+    }
+});
+</script>
+</body>
+</html>

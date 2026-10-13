@@ -1,0 +1,281 @@
+/* CONFIGURACIÓN GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #e4d5f5, #d2bdf0, #dcc3f3);
+    color: #43247b;
+}
+
+.galeria {
+    width: 100%;
+    min-height: 100vh;
+    padding: 30px 5%;
+    overflow: hidden;
+}
+
+
+/* ENCABEZADO */
+
+.encabezado {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 20px 10px 35px;
+    flex-wrap: wrap;
+}
+
+.icono-camara {
+    font-size: 75px;
+    background: #e4d3ff;
+    padding: 15px;
+    border-radius: 30px;
+}
+
+.titulo {
+    flex: 1;
+    min-width: 220px;
+}
+
+.titulo h1 {
+    font-size: clamp(39px, 5vw, 64px);
+    color: #49258b;
+    margin-bottom: 12px;
+}
+
+.titulo p {
+    font-size: 20px;
+    line-height: 1.7;
+    color: #7255a8;
+    max-width: 600px;
+}
+
+.decoracion {
+    text-align: center;
+    font-size: 40px;
+    max-width: 220px;
+}
+
+.decoracion p {
+    font-size: 20px;
+    color: #63439b;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+
+/* BOTONES DE CATEGORÍAS */
+
+.categorias {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.categorias button {
+    border: none;
+    background: #e5d7ff;
+    color: #56338e;
+    padding: 13px 24px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.categorias button:hover {
+    background: #cbb0ff;
+    transform: translateY(-3px);
+}
+
+.categorias button.activo {
+    background: #7048b7;
+    color: white;
+}
+
+
+/* CONTENEDORES DE IMÁGENES */
+
+.contenedor-imagenes {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.tarjeta {
+    background: rgba(255, 255, 255, 0.8);
+    border: 2px solid #e5d7ff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(100, 60, 160, 0.12);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(100, 60, 160, 0.22);
+}
+
+
+/* IMÁGENES */
+
+.tarjeta img {
+    display: block;
+    width: 100%;
+    height: 190px;
+    object-fit: cover, fill;
+    cursor: pointer;
+    transition: transform 0.4s;
+}
+
+.tarjeta:hover img {
+    transform: scale(1.04);
+}
+
+
+/* DESCRIPCIÓN DE CADA IMAGEN */
+
+.descripcion {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px;
+    position: relative;
+    background: #faf7ff;
+}
+
+.descripcion span {
+    background: #e3d4ff;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 19px;
+}
+
+.descripcion h3 {
+    font-size: 15px;
+    color: #4e2b87;
+}
+
+
+/* VISOR DE IMÁGENES */
+
+.visor {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(32, 15, 55, 0.9);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.visor.mostrar {
+    display: flex;
+}
+
+.visor img {
+    max-width: 90%;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 15px;
+    border: 4px solid white;
+}
+
+.cerrar {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    background: #8057c7;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+/* PIE DE PÁGINA */
+
+footer {
+    text-align: center;
+    padding: 35px 10px 10px;
+    color: #7048a8;
+    font-size: 20px;
+}
+
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+
+    .contenedor-imagenes {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .decoracion {
+        display: none;
+    }
+
+}
+
+
+/* CELULAR */
+
+@media (max-width: 550px) {
+
+    .galeria {
+        padding: 20px 4%;
+    }
+
+    .encabezado {
+        gap: 15px;
+    }
+
+    .icono-camara {
+        font-size: 45px;
+    }
+
+    .titulo h1 {
+        font-size: 35px;
+    }
+
+    .titulo p {
+        font-size: 14px;
+    }
+
+    .categorias {
+        gap: 8px;
+    }
+
+    .categorias button {
+        padding: 11px 14px;
+        font-size: 13px;
+    }
+
+    .contenedor-imagenes {
+        grid-template-columns: 1fr;
+    }
+
+    .tarjeta img {
+        height: 220px;
+    }
+
+}

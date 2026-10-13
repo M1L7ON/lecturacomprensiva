@@ -1,0 +1,310 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Comic Sans MS", "Trebuchet MS", sans-serif;
+    background: #f3e7f5;
+    color: #29205c;
+}
+
+
+/* NAVEGADOR */
+.navbar {
+    height: 105px;
+    background: #54268b;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 45px;
+    color: white;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-circulo {
+    width: 75px;
+    height: 75px;
+    background: #ffd83d;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+}
+
+.logo h1 {
+    font-size: 38px;
+    letter-spacing: 7px;
+    color: #ffd83d;
+}
+
+.logo h2 {
+    font-size: 25px;
+    color: white;
+}
+
+nav {
+    display: flex;
+    gap: 12px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    border-radius: 15px;
+    font-size: 17px;
+}
+
+nav a:hover,
+nav .activo {
+    background: #ffd83d;
+    color: #35166b;
+}
+
+
+/* TITULO */
+.titulo-libros {
+    margin: 20px 35px;
+    height: 260px;
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Imagen ocupando todo el section */
+.titulo-libros .imghe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    object-position: center;
+    z-index: 0;
+}
+
+/* Texto encima de la imagen */
+.titulo-libros div {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+}
+
+
+/* CONTENIDO */
+.contenido {
+    display: flex;
+    gap: 25px;
+    padding: 0 35px 30px;
+}
+
+
+/* CATEGORIAS */
+.categorias {
+    width: 250px;
+    background: white;
+    border-radius: 25px;
+    padding: 20px;
+    height: fit-content;
+    box-shadow: 0 5px 15px #cbb9d6;
+}
+
+.categorias h2 {
+    color: #54268b;
+    margin-bottom: 15px;
+}
+
+.categorias button {
+    width: 100%;
+    border: none;
+    padding: 13px;
+    margin: 5px 0;
+    border-radius: 15px;
+    background: #eee1ff;
+    color: #432276;
+    font-size: 15px;
+    font-family: inherit;
+    text-align: left;
+    cursor: pointer;
+}
+
+.categorias button:nth-child(3n) {
+    background: #fff0bb;
+}
+
+.categorias button:hover {
+    background: #ffd83d;
+    transform: translateX(5px);
+}
+
+
+/* SECCION */
+.seccion-libros {
+    flex: 1;
+}
+
+.buscaqueda {
+    position: relative;
+    width: 100%;
+    margin: 20px 0;
+}
+
+#buscarLibro {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 16px 20px;
+    border: 2px solid #8aa7e8;
+    border-radius: 25px;
+    outline: none;
+    font-size: 16px;
+}
+
+#resultados {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px #ccc;
+    z-index: 1000;
+}
+
+.resultado {
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.resultado:hover {
+    background: #eef3ff;
+}
+.subtitulo {
+    font-size: 30px;
+    margin-bottom: 18px;
+    color: #54268b;
+}
+
+
+/* LIBROS */
+.libros {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 18px;
+}
+
+.libro {
+    background: white;
+    border-radius: 20px;
+    padding: 12px;
+    box-shadow: 0 5px 12px #cdbedb;
+    transition: 0.3s;
+}
+
+.libro:hover {
+    transform: translateY(-8px);
+}
+
+.libro img {
+    width: 100%;
+    height: 210px;
+    object-fit: fill;
+    border-radius: 15px;
+    display: block;
+}
+
+.libro h3 {
+    font-size: 17px;
+    margin-top: 10px;
+    color: #39206c;
+}
+
+.libro p {
+    font-size: 13px;
+    color: #766b91;
+    margin: 5px 0;
+}
+
+.libro span {
+    display: inline-block;
+    background: #eadfff;
+    color: #63369a;
+    border-radius: 15px;
+    padding: 5px 12px;
+    font-size: 12px;
+}
+
+.libro button {
+    width: 100%;
+    border: none;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    background: #7043c4;
+    color: white;
+    font-family: inherit;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.libro button:hover {
+    background: #54268b;
+}
+
+
+/* PIE */
+footer {
+    background: #d9c5f5;
+    padding: 20px;
+    text-align: center;
+    font-size: 20px;
+    color: #4c267c;
+}
+
+
+/* CELULAR */
+@media (max-width: 900px) {
+
+    .navbar {
+        height: auto;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .contenido {
+        flex-direction: column;
+    }
+
+    .categorias {
+        width: 100%;
+    }
+
+    .libros {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .busqueda {
+        flex-direction: column;
+    }
+
+    .busqueda select {
+        padding: 12px;
+    }
+}

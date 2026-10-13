@@ -1,0 +1,275 @@
+ /* ===== ESTILOS GENERALES ===== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: #ffd7e7;
+            color: #921747;
+        }
+
+        /* ===== ENCABEZADO ===== */
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+            padding: 20px 7%;
+            min-height: 260px;
+            background: linear-gradient(
+                135deg,
+                #ffe0ec,
+                #f6a6c5,
+                #ffdce9
+            );
+            border-radius: 0 0 35px 35px;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero h1 {
+            font-size: clamp(37px, 5vw, 57px);
+            font-weight: 800;
+            color: #99134d;
+            margin-bottom: 12px;
+        }
+
+        .hero p {
+            font-size: 29px;
+            color: #8f2450;
+            line-height: 1.5;
+        }
+
+        .wave {
+            margin-top: 18px;
+            font-size: 26px;
+            letter-spacing: 5px;
+            color: #c42d70;
+        }
+
+        .hero-image {
+            width: 210px;
+            height: 180px;
+            flex-shrink: 0;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 22px;
+        }
+
+        /* ===== CONTENIDO ===== */
+
+        .container {
+            width: 100%;
+            
+            margin: 0 auto;
+            padding: 15pxpx;
+        }
+
+        .section-title {
+            font-size: 29px;
+            color: #99134d;
+            margin-bottom: 25px;
+        }
+
+        /* ===== LISTA SIN CONTENEDORES ===== */
+
+        .book-list {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .book-card {
+    display: grid;
+    grid-template-columns: 200px minmax(0, 1fr) 50px;
+    align-items: center;
+    gap: 18px;
+    width: 100%;
+    padding: 8px 15px 20px;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    border-bottom: 1px solid #f3c4d7;
+}
+
+        /* ===== PORTADAS ===== */
+
+        .cover {
+            display: block;
+            width: 200px;
+            height: 150px;
+            object-fit: cover, fill;
+            border-radius: 12px;
+            background: #f6c0d6;
+        }
+
+        /* ===== INFORMACIÓN ===== */
+
+        .book-info {
+            min-width: 0;
+        }
+
+        .book-info h3 {
+            font-size: 18px;
+            line-height: 1.4;
+            color: #86103f;
+            margin-bottom: 6px;
+            overflow-wrap: anywhere;
+        }
+
+        .author {
+            font-size: 14px;
+            color: #c43e79;
+            margin-bottom: 10px;
+        }
+
+        .duration {
+            font-size: 13px;
+            color: #a62a60;
+        }
+
+        /* ===== BOTÓN DE REPRODUCCIÓN ===== */
+
+        .play-button {
+            width: 50px;
+            height: 50px;
+            border: none;
+            border-radius: 50%;
+            background: #b91f63;
+            color: white;
+            font-size: 21px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 12px #b91f6330;
+            transition: transform 0.2s, background 0.2s;
+        }
+
+        .play-button:hover {
+            background: #8f1249;
+            transform: scale(1.08);
+        }
+
+        .play-button:focus-visible {
+            outline: 3px solid #ed8ab4;
+            outline-offset: 3px;
+        }
+
+        /* Ocultamos el video visualmente.
+           El audio MP4 continúa reproduciéndose. */
+
+        .hidden-video {
+            display: none;
+        }
+
+        /* ===== FOOTER ===== */
+
+        .footer {
+            text-align: center;
+            padding: 32px 15px;
+            background: linear-gradient(
+                135deg,
+                #f5a0c3,
+                #ffd6e7,
+                #f5a0c3
+            );
+            color: #921747;
+            border-radius: 30px 30px 0 0;
+        }
+
+        .footer-decoration {
+            font-size: 20px;
+            color: #b91f63;
+            margin-bottom: 12px;
+        }
+
+        .footer p {
+            font-size: 20px;
+            font-style: italic;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .footer span {
+            font-size: 13px;
+        }
+
+        /* ===== DISEÑO PARA CELULARES ===== */
+
+        @media (max-width: 480px) {
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px 20px;
+                gap: 20px;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            .hero-image {
+                width: 180px;
+                height: 125px;
+            }
+
+            .container {
+                padding: 28px 15px;
+            }
+
+            .section-title {
+                font-size: 22px;
+            }
+
+            .book-card {
+                grid-template-columns: 75px minmax(0, 1fr) 45px;
+                gap: 12px;
+                padding-bottom: 18px;
+            }
+
+            .cover {
+                width: 75px;
+                height: 105px;
+                border-radius: 9px;
+            }
+
+            .book-info h3 {
+                font-size: 15px;
+            }
+
+            .author {
+                font-size: 12px;
+            }
+
+            .duration {
+                font-size: 12px;
+            }
+
+            .play-button {
+                width: 42px;
+                height: 42px;
+                font-size: 18px;
+            }
+
+            .footer p {
+                font-size: 18px;
+            }
+        }

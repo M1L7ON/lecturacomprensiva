@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos</title>
+    <link rel="stylesheet" href="videos.css">
+</head>
+
+<body>
+
+<main class="pagina-videos">
+
+    <!-- ENCABEZADO -->
+    <header class="encabezado">
+        <div class="icono-video">🎬</div>
+
+        <div class="titulo">
+            <h1>Videos</h1>
+            <p>
+                Aprende, descubre y disfruta de contenidos
+                que te harán ver el mundo desde otra perspectiva.
+            </p>
+        </div>
+
+        <div class="decoracion">
+            🎧 💗
+            <p>Los grandes aprendizajes también se ven.</p>
+        </div>
+    </header>
+
+    <!-- GALERÍA DE VIDEOS -->
+    <section class="galeria-videos">
+
+        <!-- VIDEO 1 -->
+        <article class="tarjeta" onclick="abrirVideo('video1')">
+            <div class="miniatura">
+                <img src="vide1.jpeg" alt="Paisaje natural">
+                <span class="duracion">5:32</span>
+            </div>
+
+            <div class="contenido">
+                <h2>La Odisea</h2>
+                <p>Viaje astuto de 10 años para volver a casa.</p>
+            </div>
+
+            <div class="video-oculto" id="video1">
+                <video src="ricardogamas_video_no_watermark.mp4"
+                       title="La belleza de nuestro planeta"
+                       controls></video>
+            </div>
+        </article>
+
+        <!-- VIDEO 2 -->
+        <article class="tarjeta" onclick="abrirVideo('video2')">
+            <div class="miniatura">
+                <img src="vide2.jpeg" alt="El planeta Tierra">
+                <span class="duracion">6:15</span>
+            </div>
+
+            <div class="contenido">
+                <h2>Romeo y Julieta</h2>
+                <p>Amor prohibido que termina en tragedia.</p>
+            </div>
+
+            <div class="video-oculto" id="video2">
+                <video src="Lumi_video_no_watermark_hd.mp4"
+                       title="El sistema solar"
+                       controls></video>
+            </div>
+        </article>
+
+        <!-- VIDEO 3 -->
+        <article class="tarjeta" onclick="abrirVideo('video3')">
+            <div class="miniatura">
+                <img src="vide3.jpeg" alt="Computadora portátil">
+                <span class="duracion">4:48</span>
+            </div>
+
+            <div class="contenido">
+                <h2>Cien años de Soledad</h2>
+                <p>Familia condenada a repetir su soledad.</p>
+            </div>
+
+            <div class="video-oculto" id="video3">
+                <video src="Lumi_video_no_watermark_hd (1).mp4"
+                       title="Herramientas digitales"
+                       controls></video>
+            </div>
+        </article>
+
+        <!-- VIDEO 4 -->
+        <article class="tarjeta" onclick="abrirVideo('video4')">
+            <div class="miniatura">
+                <img src="vide4.jpeg" alt="Alimentación saludable">
+                <span class="duracion">5:20</span>
+            </div>
+
+            <div class="contenido">
+                <h2>Los Cinco Anillos</h2>
+                <p>Mente samurái para vencer sin pelear.</p>
+            </div>
+
+            <div class="video-oculto" id="video4">
+                <video src="Lumi_video_no_watermark.mp4"
+                       title="Vida saludable"
+                       controls></video>
+            </div>
+        </article>
+
+        <!-- VIDEO 5 -->
+        <article class="tarjeta" onclick="abrirVideo('video5')">
+            <div class="miniatura">
+                <img src="vide5.jpeg" alt="Perros y animales">
+                <span class="duracion">4:37</span>
+            </div>
+
+            <div class="contenido">
+                <h2>El Arte de Amar</h2>
+                <p>Amar se aprende, no solo se siente.</p>
+            </div>
+
+            <div class="video-oculto" id="video5">
+                <video src="Lumi_video_no_watermark (3).mp4"
+                       title="Los animales y su mundo"
+                       controls></video>
+            </div>
+        </article>
+
+        <!-- VIDEO 6 -->
+        <article class="tarjeta" onclick="abrirVideo('video6')">
+            <div class="miniatura">
+                <img src="vide6.jpeg" alt="Arquitectura cultural">
+                <span class="duracion">5:50</span>
+            </div>
+
+            <div class="contenido">
+                <h2>El Hombre Mediocre</h2>
+                <p>Mediocre se conforma, idealista se supera.</p>
+            </div>
+
+            <div class="video-oculto" id="video6">
+                <video src="Lumi_video_no_watermark (1).mp4"
+                       title="Nuestras tradiciones"
+                       controls></video>
+            </div>
+        </article>
+
+        <!-- VIDEO 7 -->
+        <article class="tarjeta" onclick="abrirVideo('video7')">
+            <div class="miniatura">
+                <img src="vide7.jpeg" alt="Cámara fotográfica">
+                <span class="duracion">5:12</span>
+            </div>
+
+            <div class="contenido">
+                <h2>Noches Blancas</h2>
+                <p>Amor de 4 noches que deja nostalgia.</p>
+            </div>
+
+            <div class="video-oculto" id="video7">
+                <video src="Lumi_video_no_watermarkmnm.mp4"
+                       title="El poder del cine"
+                       controls></video>
+            </div>
+        </article>
+
+        <!-- VIDEO 8 -->
+        <article class="tarjeta" onclick="abrirVideo('video8')">
+            <div class="miniatura">
+                <img src="vide8.jpeg" alt="Paisaje al amanecer">
+                <span class="duracion">4:25</span>
+            </div>
+
+            <div class="contenido">
+                <h2>El Principito</h2>
+                <p>Lo esencial es invisible a los ojos.</p>
+            </div>
+
+            <div class="video-oculto" id="video8">
+                <video src="Mart_n_Valoroso_video_no_watermark.mp4"
+                       title="Nunca te rindas"
+                       controls></video>
+            </div>
+        </article>
+
+    </section>
+
+    <!-- VENTANA DEL REPRODUCTOR -->
+    <div class="visor" id="visor">
+        <div class="visor-contenido">
+
+            <button class="cerrar"
+                    onclick="cerrarVideo(event)"
+                    aria-label="Cerrar video">
+                &times;
+            </button>
+
+            <div id="reproductor"></div>
+
+        </div>
+    </div>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="pie">
+        <p>💗 ¡Dale play a tus sueños! 💗</p>
+    </footer>
+
+</main>
+
+<script>
+function abrirVideo(id) {
+    const videoOriginal = document.querySelector(
+        "#" + id + " video"
+    );
+
+    if (!videoOriginal) return;
+
+    const reproductor = document.getElementById("reproductor");
+    reproductor.innerHTML = "";
+
+    const video = document.createElement("video");
+
+    video.src = videoOriginal.getAttribute("src");
+    video.controls = true;
+    video.playsInline = true;
+    video.preload = "metadata";
+
+    reproductor.appendChild(video);
+
+    document.getElementById("visor").classList.add("mostrar");
+}
+
+function cerrarVideo(event) {
+    if (event) event.stopPropagation();
+
+    document.getElementById("visor").classList.remove("mostrar");
+
+    const reproductor = document.getElementById("reproductor");
+    reproductor.querySelectorAll("video").forEach(video => {
+        video.pause();
+        video.removeAttribute("src");
+        video.load();
+    });
+
+    reproductor.innerHTML = "";
+}
+
+/* Cerrar al hacer clic fuera del video */
+document.getElementById("visor").addEventListener("click", function(event) {
+    if (event.target === this) {
+        cerrarVideo();
+    }
+});
+
+/* Evitar que los clics dentro de la ventana la cierren */
+document.querySelector(".visor-contenido").addEventListener("click", function(event) {
+    event.stopPropagation();
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,419 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    background: #ead9eb;
+    color: #25134d;
+}
+
+
+.navbar {
+    width: 96%;
+    margin: 20px auto;
+    padding: 18px 30px;
+
+    background: linear-gradient(135deg, #57238b, #7135a5);
+
+    border-radius: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    box-shadow: 0 6px 15px rgba(60, 25, 90, .25);
+}
+
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.marca img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+h1{
+    color: pink;
+}
+h2{
+    color: cornflowerblue;
+}
+.marca h1 {
+    color: yellow;
+    font-size: 36px;
+    letter-spacing: 5px;
+}
+
+.marca h2 {
+    color: white;
+    font-size: 24px;
+}
+
+
+nav {
+    display: flex;
+    gap: 8px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+
+    padding: 14px 18px;
+
+    border-radius: 15px;
+
+    font-weight: bold;
+}
+
+nav a:hover,
+nav a.activo {
+    background: #f8afe8;
+    color: #3d176c;
+}
+/* CONTENEDOR DEL BUSCADOR */
+.buscar {
+    position: relative;
+    width: 300px;
+}
+
+/* CAMPO DE BÚSQUEDA */
+.buscar input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #a64dba;
+    border-radius: 25px;
+    outline: none;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* TABLERO QUE BAJA */
+.tablero-resultados {
+    display: none;
+    position: absolute;
+    top: calc(100% + 12px);
+    right: 0;
+    width: 350px;
+    max-height: 350px;
+    overflow-y: auto;
+    background: #ffffff;
+    border: 2px solid #d6a1e5;
+    border-radius: 18px;
+    padding: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    box-sizing: border-box;
+}
+
+/* CADA TARJETA DE RESULTADO */
+.tablero-resultados a {
+    display: block;
+    background: #f8effb;
+    border: 1px solid #e2c5ed;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 10px;
+    color: #653477;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* EFECTO AL PASAR EL CURSOR */
+.tablero-resultados a:hover {
+    background: #e8d2f2;
+    transform: translateY(-2px);
+}
+
+/* MENSAJE */
+.tablero-resultados p {
+    text-align: center;
+    padding: 15px;
+    color: #777;
+}
+
+
+/* CONTENEDOR DE LAS TRES OPCIONES */
+.opciones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 110px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+
+/* CONTENEDOR DE CADA IMAGEN */
+.opcion {
+    width: 300px;
+    height: 270px;
+    border-radius: 30px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* ENLACE */
+.opcion a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+/* IMAGEN CON BORDE MORADO INTERIOR */
+.opcion img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover, fill;
+    box-sizing: border-box;
+    border: 5px solid #a64dba;
+    border-radius: 30px;
+    transition: transform 0.3s ease;
+}
+
+/* EFECTO AL PASAR EL CURSOR */
+.opcion img:hover {
+    transform: scale(1.03);
+}
+.banner {
+    width: 96%;
+    height: 300px;
+    margin: 20px auto;
+
+    background: linear-gradient(
+        90deg,
+        #c7efff,
+        #e8faff,
+        #bde9ff
+    );
+
+    border: 10px solid #182c76;
+    border-radius: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+.decoracion {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.decoracion img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover, contain;
+}
+
+
+.recomendados {
+    width: 96%;
+    margin: 30px auto;
+}
+
+.titulo-seccion {
+    background: #67309b;
+
+    padding: 15px 20px;
+
+    border-radius: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: white;
+}
+
+.titulo-seccion a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* LIBROS */
+
+.contenedor-libros {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 22px;
+
+    margin-top: 20px;
+}
+
+.tarjeta {
+    padding: 15px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 5px 12px rgba(0,0,0,.15);
+
+    transition: .3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-8px);
+}
+
+.amarillo {
+    background: #ffdc42;
+}
+
+.verde {
+    background: #79ce4a;
+}
+
+.celeste {
+    background: #39aee0;
+}
+
+.rosado {
+    background: #df55a4;
+}
+
+.categoria {
+    display: block;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 180px;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+}
+
+.tarjeta h3 {
+    margin-top: 12px;
+
+    font-size: 19px;
+}
+
+.tarjeta p {
+    margin-top: 6px;
+
+    font-size: 14px;
+}
+.imgre{
+    height: 300px;
+    width: 250px;
+}
+.tarjeta button {
+    width: 100%;
+
+    margin-top: 15px;
+
+    padding: 11px;
+
+    border: none;
+
+    border-radius: 20px;
+
+    background: #54268b;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.tarjeta button:hover {
+    background: #35165e;
+}
+
+
+footer {
+    margin-top: 35px;
+
+    padding: 25px;
+
+    text-align: center;
+
+    background: #cbb2e2;
+
+    color: #54268b;
+
+    font-size: 20px;
+
+    font-weight: bold;
+}
+
+
+@media (max-width: 1000px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .opciones {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contenedor-libros {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .banner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .texto-banner h2 {
+        font-size: 30px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .opciones,
+    .contenedor-libros {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .buscar {
+        width: 90%;
+    }
+
+    .buscar input {
+        width: 100%;
+    }
+}
